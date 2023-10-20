@@ -22,22 +22,22 @@ Para comenzar a trabajar con la placa ESP32 y este proyecto, sigue estos pasos p
 
 3. **Conectar la Placa ESP32:**
    - Conecta la placa ESP32 a tu computadora mediante un cable USB.
-   - Asegúrate de que la placa esté alimentada correctamente.
 
 4. **Verificar la Conexión:**
    - Abre el Administrador de Dispositivos en Windows o utiliza comandos como `ls /dev` en Linux/macOS para verificar si la placa ESP32 aparece correctamente.
 
-5. **Configuración en Visual Studio Code con PlatformIO:**
-   - Abre tu proyecto en Visual Studio Code.
-   - Asegúrate de tener la extensión PlatformIO instalada.
-   - En la barra lateral, selecciona "PlatformIO" y luego "Devices" para ver si la placa ESP32 está detectada.
+5. **Configuración en Visual Studio Code con Pymakr:**
+   - Asegúrate de tener la extensión Pymakr instalada en Visual Studio Code.
+   - Abre tu proyecto y selecciona el puerto COM correcto para tu ESP32 en la configuración de Pymakr.
 
-6. **Seleccionar el Puerto COM:**
-   - Si estás utilizando Windows, ve a "Administrador de Dispositivos" y busca el puerto COM asignado a tu ESP32. En Visual Studio Code, selecciona este puerto en la configuración de PlatformIO.
-
-7. **Reiniciar Visual Studio Code y PlatformIO:**
+6. **Reiniciar Visual Studio Code:**
    - Reinicia Visual Studio Code después de configurar los controladores y el puerto COM.
 
+Para una guía visual detallada sobre cómo configurar tu placa ESP32 y Visual Studio Code con la extensión Pymakr, puedes consultar el siguiente video tutorial:
+
+[![Configuración de Placa ESP32 con Pymakr](https://img.youtube.com/vi/YOeV14SESls/0.jpg)](https://www.youtube.com/watch?v=YOeV14SESls&t=186s)
+
+Asegúrate de seguir los pasos y ajustar la configuración según las necesidades de tu proyecto. Si tienes alguna pregunta específica después de ver el video o necesitas más ayuda, no dudes en preguntar en nuestro [foro de soporte](#enlace-al-foro) o [comunidad en línea](#enlace-a-comunidad).
 
 ## Configuración de la Placa
 

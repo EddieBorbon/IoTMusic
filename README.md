@@ -58,15 +58,25 @@ Antes de ejecutar el script en tu dispositivo ESP32, asegúrate de configurar co
 
 3. Guarda los cambios en el archivo.
 
-4. Carga el script modificado en tu dispositivo ESP32.
+4. Presiona el botón de carga (Upload) en Pymakr para cargar el script en tu dispositivo.
 
-5. Reinicia el dispositivo o ejecuta el script.
-
-El dispositivo debería ahora conectarse a tu red WiFi. Puedes verificar la conexión abriendo la consola serial en tu entorno de desarrollo.
-
+5. Realiza un reinicio del dispositivo (hard reset) para ejecutar el script. Puedes hacer esto a través de los botones proporcionados por Pymakr o según las instrucciones específicas de tu placa.
+   
 Si encuentras problemas de conexión, asegúrate de que los detalles de la red WiFi sean correctos y de que la placa ESP32 está en un rango de señal adecuado.
 
-## Ejemplo de Configuración de WiFi
+En consola te parecer un mensaje como el siguiente
+
+```python
+Uploading and running the script...
+Upload and run complete!
+Connecting to "YOUR NETWORK"
+Connection Successfully to "YOUR NETWORK"
+Executing code
+Connected to 192.168.2.2:8888
+MicroPython v1.21.0 on 2023-10-05; Generic ESP32 module with ESP32
+```
+
+
 
 ## Configuración de la Placa
 

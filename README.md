@@ -9,7 +9,7 @@ Este proyecto utiliza MicroPython para integrar una fotoresistencia con la tecno
 - NodeJs.
 - MicroPython.
 
-## Configuración de Placa ESP32
+## 1. Configuración de Placa ESP32
 
 Para comenzar a trabajar con la placa ESP32 y este proyecto, sigue estos pasos para configurar los controladores:
 
@@ -38,6 +38,35 @@ Para una guía visual detallada sobre cómo configurar tu placa ESP32 y Visual S
 [![Configuración de Placa ESP32 con Pymakr](https://img.youtube.com/vi/YOeV14SESls/0.jpg)](https://www.youtube.com/watch?v=YOeV14SESls&t=186s)
 
 Asegúrate de seguir los pasos y ajustar la configuración según las necesidades de tu proyecto. Si tienes alguna pregunta específica después de ver el video o necesitas más ayuda, no dudes en preguntar en nuestro [foro de soporte](#enlace-al-foro) o [comunidad en línea](#enlace-a-comunidad).
+
+## 2.Configuración de la Red WiFi
+
+Antes de ejecutar el script en tu dispositivo ESP32, asegúrate de configurar correctamente la conexión WiFi. Sigue estos pasos:
+
+1. Descarga la carpeta 1. Configurar RED Wifi, carga los scripts en un proyecto de Visual Studio.
+
+2. Busca la sección de **Configuración de WiFi** en el código. Debería verse algo así:
+
+    ```python
+    # Configuración de WiFi
+      SSID = 'WRITE YOUR NAME NETWORK HERE'
+      PASS = 'WRITE YOUR PASSWORD NETWORK HERE'
+      CONNECTING_TRIES = 3
+    ```
+
+    Reemplaza `'SSID'` y `'PASS'` con los detalles de tu red WiFi.
+
+3. Guarda los cambios en el archivo.
+
+4. Carga el script modificado en tu dispositivo ESP32.
+
+5. Reinicia el dispositivo o ejecuta el script.
+
+El dispositivo debería ahora conectarse a tu red WiFi. Puedes verificar la conexión abriendo la consola serial en tu entorno de desarrollo.
+
+Si encuentras problemas de conexión, asegúrate de que los detalles de la red WiFi sean correctos y de que la placa ESP32 está en un rango de señal adecuado.
+
+## Ejemplo de Configuración de WiFi
 
 ## Configuración de la Placa
 

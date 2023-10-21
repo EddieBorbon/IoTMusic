@@ -119,8 +119,8 @@ En este paso, configuraremos la placa ESP32 para leer datos de un sensor de foto
 
 Con estos pasos, tu placa ESP32 estará configurada para recibir datos de un sensor y enviarlos al servidor.
 
-![Logo de Mi Proyecto](https://github.com/EddieBorbon/IoTMusic/main/Images/esp32-ldr-wiring.jpg)
-![Logo de Mi Proyecto](https://github.comEddieBorbon/IoTMusic/main/Images/ESP32-Pinout.jpg)
+![Logo de Mi Proyecto](https://github.com/EddieBorbon/IoTMusic/blob/main/Images/ESP32-Pinout.jpg)
+![Logo de Mi Proyecto](https://github.com/EddieBorbon/IoTMusic/blob/main/Images/esp32-ldr-wiring.jpg)
 
 ## Configuración de la Placa
 

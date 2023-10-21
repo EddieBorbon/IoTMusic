@@ -1,13 +1,13 @@
 # Proyecto IoTMusic - Teleperformance de Música y Tecnología
 
-Este proyecto utiliza MicroPython para integrar un potenciómetro con la tecnología IoT (Internet de las cosas) y música, enviando los valores del potenciómetro a través de UDP a un servidor.
+Este proyecto utiliza MicroPython para integrar una fotoresistencia con la tecnología IoT (Internet de las cosas) y música, enviando los valores de una fotoresistencia a través de UDP a un servidor y luego controlar parámetros sonoros en pure data.
 
 ## Requisitos
 
-- Hardware: Placa ESP32, Sensores y actuadores.
+- Hardware: Placa ESP32, Sensores (fotoresistencia) y actuadores (LED).
 - Visual Studio.
-- NodeJs
-- MicroPython: Asegúrate de tener MicroPython instalado en tu dispositivo.
+- NodeJs.
+- MicroPython.
 
 ## Configuración de Placa ESP32
 

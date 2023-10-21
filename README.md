@@ -76,7 +76,37 @@ Connected to 192.168.2.2:8888
 MicroPython v1.21.0 on 2023-10-05; Generic ESP32 module with ESP32
 ```
 
+### Sugerencia:
+Si no conoces tu IP, realiza el siguiente procedimiento:
 
+## Configuración del Servidor UDP
+
+Antes de ejecutar el script, puedes obtener dinámicamente la dirección IP del servidor UDP utilizando el comando `ipconfig` en la terminal de Windows. Sigue estos pasos:
+
+1. **Abre la terminal de Windows:**
+   - Busca "cmd" o "Símbolo del sistema" en el menú de inicio y ábrelo.
+
+2. **Ejecuta el comando `ipconfig` para obtener información sobre las interfaces de red:**
+   - Utiliza el siguiente comando:
+
+   ```plaintext
+   > ipconfig
+
+Busca la sección correspondiente a tu interfaz de red activa, generalmente "Adaptador de Ethernet" o "Adaptador de Wi-Fi". Allí encontrarás tu "Dirección IPv4". Anota esta dirección IP.
+
+Adaptador de Ethernet:
+...
+   ```plaintext
+   Dirección IPv4. . . . . . . . . . . . . . : xxx.xxx.xxx.xxx
+   ```
+Configura el servidor UDP con la dirección IP anotada:
+
+En tu script, utiliza la dirección IP que has anotado para la conexión al servidor UDP.
+```plaintext
+pd_host = 'xxx.xxx.xxx.xxx'  # Utiliza la dirección IP anotada
+pd_port = 8888
+pd.connect((pd_host, pd_port))
+```
 
 ## Configuración de la Placa
 

@@ -107,6 +107,20 @@ pd_host = 'xxx.xxx.xxx.xxx'  # Utiliza la dirección IP anotada
 pd_port = 8888
 pd.connect((pd_host, pd_port))
 ```
+### 3. Recibir Datos de un Sensor
+
+En este paso, configuraremos la placa ESP32 para leer datos de un sensor de fotorresistencia. Sigue estos pasos:
+
+1. **Configura el Sensor:**
+   - Conecta el sensor de fotorresistencia al pin analógico 36 de la placa ESP32.
+
+2. **Ver Resultados:**
+   - Ejecuta el código y observa los valores de la fotorresistencia que se imprimen en la consola.
+
+Con estos pasos, tu placa ESP32 estará configurada para recibir datos de un sensor y enviarlos al servidor.
+
+![Logo de Mi Proyecto](https://github.com/EddieBorbon/IoTMusic/edit/main/images/circuit.png)
+![Logo de Mi Proyecto](https://github.comEddieBorbon/IoTMusic/edit/main/images/PinOUTESP32.png)
 
 ## Configuración de la Placa
 

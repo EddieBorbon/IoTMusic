@@ -88,7 +88,7 @@ El servidor, configurado en Pure Data, recibe estos datos y los utiliza para inf
 ### Conexión a Internet
 
 
-Este proyecto proporciona una plataforma para la exploración creativa de la intersección entre la tecnología IoT, la música y el control de motores. ¡Disfruta experimentando y creando tus propias experiencias musicales, cinéticas y sensoriales!
+Este proyecto proporciona una plataforma para la exploración creativa de la intersección entre la tecnología IoT y la música. ¡Disfruta experimentando y creando tus propias experiencias musicales, cinéticas y sensoriales!
 
 
 ---

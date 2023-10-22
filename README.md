@@ -37,8 +37,8 @@ El servidor, configurado en Pure Data, recibe estos datos y los utiliza para inf
 
 - **1. Configurar RED Wifi:** Contiene scripts para configurar la conexión Wi-Fi del ESP32.
 - **2. Configurar Servidor UDP:** Scripts para configurar el servidor UDP en el ESP32.
-- **3. Configurar Pure Data:** Contiene scripts y configuraciones para el servidor Pure Data.
-- **4. Pure data to ESP32:** Incluye el código de MicroPython para el ESP32 y las configuraciones en Pure Data para recibir datos, controlar parámetros sonoros y controlar el motor.
+- **3. Recivir Datos desde ESP32:** Contiene scripts y configuraciones para recibir datos desde ESP32 del sensor (forotresistencia) y enviarlos a Pure Data.
+- **4. Enviar datos a ESP32:** Incluye el código de MicroPython para el ESP32 y las configuraciones en Pure Data para enviar datos al ESP32.
 
 ## Instrucciones de Uso
 
@@ -87,10 +87,10 @@ El servidor, configurado en Pure Data, recibe estos datos y los utiliza para inf
 
 ### Conexión a Internet
 
-- **Wi-Fi:**
-  - Configurar el ESP32 para conectarse a una red Wi-Fi.
 
-####Este proyecto proporciona una plataforma para la exploración creativa de la intersección entre la tecnología IoT, la música y el control de motores. ¡Disfruta experimentando y creando tus propias experiencias musicales, cinéticas y sensoriales!
+### Este proyecto proporciona una plataforma para la exploración creativa de la intersección entre la tecnología IoT, la música y el control de motores. ¡Disfruta experimentando y creando tus propias experiencias musicales, cinéticas y sensoriales!
+
+
 ---
 
 ## 1. Configuración de Placa ESP32

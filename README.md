@@ -1,13 +1,121 @@
-# Proyecto IoTMusic - Teleperformance de Música y Tecnología
+# Proyecto IoTMusic - Integración de Sensores, Actuadores, IoT y Música
 
-Este proyecto utiliza MicroPython para integrar una fotoresistencia con la tecnología IoT (Internet de las cosas) y música, enviando los valores de una fotoresistencia a través de UDP a un servidor y luego controlar parámetros sonoros en pure data.
+Este proyecto utiliza MicroPython para integrar una fotoresistencia con la tecnología IoT (Internet de las cosas) y música. Los valores de la fotoresistencia se envían a través de UDP desde un ESP32 a un servidor, luego se utilizan para controlar parámetros sonoros en Pure Data y un motor en tiempo real.
 
-## Requisitos
+## Descripción del Proyecto
 
-- Hardware: Placa ESP32, Sensores (fotoresistencia) y actuadores (motor DC).
-- Visual Studio.
-- NodeJs.
-- MicroPython.
+En este proyecto, hemos desarrollado una solución que combina hardware y software para explorar la intersección entre la música y la tecnología. Utilizando un ESP32 con MicroPython, hemos conectado una fotoresistencia para medir la luz ambiente. Los valores obtenidos se transmiten de manera inalámbrica a un servidor a través de UDP.
+
+El servidor, configurado en Pure Data, recibe estos datos y los utiliza para influir en parámetros sonoros. Además, Pure Data envía datos al ESP32 para controlar un motor en tiempo real. La fotoresistencia actúa como un sensor que interactúa con el entorno, permitiendo la creación de experiencias musicales y cinéticas únicas basadas en la intensidad de la luz.
+
+## Componentes del Proyecto
+
+- **ESP32 con MicroPython:** El ESP32 funciona como un dispositivo IoT que captura datos del entorno utilizando una fotoresistencia y los envía a un servidor.
+
+- **Fotoresistencia:** Mide la luz ambiente y proporciona datos analógicos que reflejan las condiciones lumínicas.
+
+- **UDP y Pure Data:** Se utiliza la comunicación UDP para transmitir datos desde el ESP32 a un servidor Pure Data y viceversa. Pure Data interpreta estos datos para modular parámetros sonoros y controlar un motor en tiempo real.
+
+- **Motor Controlado por ESP32:** Se utiliza un motor controlado por el ESP32 para agregar una dimensión cinética al proyecto.
+
+## Configuración del Proyecto
+
+1. **Configuración del Hardware:**
+   - Conecta la fotoresistencia y el motor al ESP32 según el esquema de conexión proporcionado.
+   - Configura Pure Data para recibir y enviar datos según las especificaciones.
+
+2. **Configuración del Software:**
+   - Utiliza Visual Studio Code para abrir la carpeta del proyecto.
+   - Configura el ESP32 con MicroPython y carga los scripts proporcionados.
+   - Configura Pure Data en el servidor según las instrucciones proporcionadas.
+
+3. **Visualización y Control:**
+   - Utiliza Pure Data para visualizar y controlar la respuesta sonora en tiempo real basada en los datos de la fotoresistencia.
+   - Configura Pure Data para enviar datos al ESP32 y controlar el motor en tiempo real.
+
+## Estructura de la Carpeta
+
+- **1. Configurar RED Wifi:** Contiene scripts para configurar la conexión Wi-Fi del ESP32.
+- **2. Configurar Servidor UDP:** Scripts para configurar el servidor UDP en el ESP32.
+- **3. Configurar Pure Data:** Contiene scripts y configuraciones para el servidor Pure Data.
+- **4. Pure data to ESP32:** Incluye el código de MicroPython para el ESP32 y las configuraciones en Pure Data para recibir datos, controlar parámetros sonoros y controlar el motor.
+
+## Instrucciones de Uso
+
+1. **Descarga del Proyecto:**
+   - Descarga este repositorio en tu máquina local.
+
+2. **Configuración del Hardware:**
+   - Conecta la fotoresistencia y el motor al ESP32 según las instrucciones proporcionadas.
+
+3. **Configuración del Software:**
+   - Utiliza Visual Studio Code para abrir la carpeta del proyecto.
+   - Configura el ESP32 con MicroPython y carga los scripts proporcionados.
+   - Configura Pure Data en el servidor según las instrucciones proporcionadas.
+
+4. **Ejecución del Proyecto:**
+   - Ejecuta los scripts en MicroPython y Pure Data para iniciar la captura y procesamiento de datos.
+
+5. **Exploración Musical, Cinética y Control del Motor:**
+   - Mueve la fotoresistencia para experimentar con diferentes condiciones lumínicas y observa cómo afecta a la música y al motor.
+
+## Requisitos del Proyecto
+
+### Hardware
+
+- **ESP32 con MicroPython:**
+  - Descargar e instalar controladores USB para la placa ESP32.
+  - Configurar Visual Studio Code con la extensión Pymakr para cargar scripts en el ESP32.
+
+- **Sensores y Actuadores:**
+  - Fotoresistencia: Conectar al pin analógico del ESP32 (por ejemplo, pin 32).
+  - Motor: Conectar al pin PWM del ESP32 (por ejemplo, pin 12).
+
+### Software
+
+- **Visual Studio Code:**
+  - Instalar Visual Studio Code como entorno de desarrollo.
+  - Instalar la extensión Pymakr para la programación del ESP32.
+
+- **MicroPython:**
+  - Configurar MicroPython en el ESP32.
+  - Cargar scripts en el ESP32 utilizando Visual Studio Code y Pymakr.
+
+- **Pure Data:**
+  - Descargar e instalar Pure Data en el servidor.
+  - Configurar Pure Data para recibir y enviar datos a través de UDP.
+
+### Conexión a Internet
+
+- **Wi-Fi:**
+  - Configurar el ESP32 para conectarse a una red Wi-Fi.
+
+## Configuración de Wi-Fi en ESP32
+
+1. Descargar la carpeta "1. Configurar RED Wifi" del proyecto.
+2. Modificar los scripts para incluir el nombre de la red y la contraseña Wi-Fi.
+3. Cargar los scripts en el ESP32 utilizando Visual Studio Code y Pymakr.
+
+## Configuración del Servidor UDP en ESP32
+
+1. Descargar la carpeta "2. Configurar Servidor UDP" del proyecto.
+2. Modificar el script según sea necesario (por ejemplo, cambiar el pin del motor).
+3. Cargar el script en el ESP32 utilizando Visual Studio Code y Pymakr.
+
+## Configuración en Pure Data
+
+1. Descargar la carpeta "3. Configurar Pure Data" del proyecto.
+2. Abrir los scripts y configuraciones en Pure Data.
+3. Configurar Pure Data para recibir y enviar datos a través de UDP.
+
+## Configuración de Pure Data para Controlar el Motor
+
+1. Descargar la carpeta "4. Pure data to ESP32" del proyecto.
+2. Modificar el script de MicroPython en el ESP32 según sea necesario.
+3. Configurar Pure Data para enviar datos al ESP32 y controlar el motor.
+
+Este proyecto proporciona una plataforma para la exploración creativa de la intersección entre la tecnología IoT, la música y el control de motores. ¡Disfruta experimentando y creando tus propias experiencias musicales, cinéticas y sensoriales!
+---
 
 ## 1. Configuración de Placa ESP32
 
@@ -79,7 +187,7 @@ MicroPython v1.21.0 on 2023-10-05; Generic ESP32 module with ESP32
 ### Sugerencia:
 Si no conoces tu IP, realiza el siguiente procedimiento:
 
-## Configuración del Servidor UDP
+## 3. Configuración del Servidor UDP
 
 Antes de ejecutar el script, puedes obtener dinámicamente la dirección IP del servidor UDP utilizando el comando `ipconfig` en la terminal de Windows. Sigue estos pasos:
 
@@ -107,7 +215,7 @@ pd_host = 'xxx.xxx.xxx.xxx'  # Utiliza la dirección IP anotada
 pd_port = 8888
 pd.connect((pd_host, pd_port))
 ```
-### 3. Recibir Datos de un Sensor desde ESP32 y enviarlos a Pure Data.
+### 4. Recibir Datos de un Sensor desde ESP32 y enviarlos a Pure Data.
 
 En este paso, configuraremos la placa ESP32 para leer datos de un sensor de fotorresistencia. Sigue estos pasos:
 
@@ -170,21 +278,29 @@ Con estos pasos, tu ESP32 debería estar enviando datos a Pure Data. Puedes ajus
 
 Este proyecto proporciona una base para explorar la integración de sensores y actuadores con tecnologías IoT y música utilizando MicroPython y Pure Data. ¡Diviértete explorando y creando!
 
-## 4. Configuración del Código en ESP32 para Servo Motor
+## 5. Pure Data to ESP32
 
-En este paso, te explicaremos cómo configurar el código en tu ESP32 para recibir datos desde Pure Data y controlar un servo motor.
+En esta sección, te guiaremos a través de la configuración de Pure Data para enviar datos a tu ESP32 y controlar un motor.
 
-### 4.1 Configuración del Servidor UDP
+1. **Descarga de la Carpeta:**
+   - Descarga la carpeta "4. Pure data to ESP32".
+   - Abre la carpeta "4. Pure data to ESP32" desde Visual Studio Code.
 
-Abre el script en tu proyecto, por ejemplo, `servoControl.py`.
+2. **Configuración en Pure Data**
+Abre Pure Data y sigue estos pasos:
+   - Crea un objeto `[udpsend 192.168.1.115 5050]` para enviar datos a la dirección IP de tu ESP32 y al puerto configurado en tu script (`5050` en este caso).
+   - Puedes utilizar diferentes objetos para generar datos. Por ejemplo, un objeto `[hslider]` puede generar valores que enviarás a tu ESP32. Conecta el `[hslider]` al `[udpsend]` para enviar los valores.
+   - Si deseas visualizar los datos que estás enviando, puedes crear un objeto `[print]` y conectarlo al `[udpsend]`.
 
-Busca la sección que configura el servidor UDP:
+3. **Ejecución y Verificación**
+Ejecuta tu script en Pure Data.
+Mueve el slider (o genera datos de la manera que hayas configurado) para enviar valores a tu ESP32.
+Observa la consola de Pure Data para verificar que los datos se estén enviando correctamente.
 
-```python
-addr = usocket.getaddrinfo('0.0.0.0', 5050)[0][-1]
-server = usocket.socket(usocket.AF_INET, usocket.SOCK_DGRAM)
-server.bind(addr)
-print('Servidor listo para recibir')
+Con estos pasos, habrás configurado Pure Data para enviar datos a tu ESP32 y controlar el motor.
+
+Sugerencia:
+Si encuentras problemas de conexión, verifica que las direcciones IP y los puertos coincidan entre Pure Data y la ESP32. Puedes utilizar las herramientas de depuración en ambas plataformas para identificar cualquier problema potencial.
 
 ## Contribución
 

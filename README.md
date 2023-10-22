@@ -90,31 +90,7 @@ El servidor, configurado en Pure Data, recibe estos datos y los utiliza para inf
 - **Wi-Fi:**
   - Configurar el ESP32 para conectarse a una red Wi-Fi.
 
-## Configuración de Wi-Fi en ESP32
-
-1. Descargar la carpeta "1. Configurar RED Wifi" del proyecto.
-2. Modificar los scripts para incluir el nombre de la red y la contraseña Wi-Fi.
-3. Cargar los scripts en el ESP32 utilizando Visual Studio Code y Pymakr.
-
-## Configuración del Servidor UDP en ESP32
-
-1. Descargar la carpeta "2. Configurar Servidor UDP" del proyecto.
-2. Modificar el script según sea necesario (por ejemplo, cambiar el pin del motor).
-3. Cargar el script en el ESP32 utilizando Visual Studio Code y Pymakr.
-
-## Configuración en Pure Data
-
-1. Descargar la carpeta "3. Configurar Pure Data" del proyecto.
-2. Abrir los scripts y configuraciones en Pure Data.
-3. Configurar Pure Data para recibir y enviar datos a través de UDP.
-
-## Configuración de Pure Data para Controlar el Motor
-
-1. Descargar la carpeta "4. Pure data to ESP32" del proyecto.
-2. Modificar el script de MicroPython en el ESP32 según sea necesario.
-3. Configurar Pure Data para enviar datos al ESP32 y controlar el motor.
-
-Este proyecto proporciona una plataforma para la exploración creativa de la intersección entre la tecnología IoT, la música y el control de motores. ¡Disfruta experimentando y creando tus propias experiencias musicales, cinéticas y sensoriales!
+####Este proyecto proporciona una plataforma para la exploración creativa de la intersección entre la tecnología IoT, la música y el control de motores. ¡Disfruta experimentando y creando tus propias experiencias musicales, cinéticas y sensoriales!
 ---
 
 ## 1. Configuración de Placa ESP32

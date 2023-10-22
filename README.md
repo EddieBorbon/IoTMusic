@@ -4,7 +4,7 @@ Este proyecto utiliza MicroPython para integrar una fotoresistencia con la tecno
 
 ## Requisitos
 
-- Hardware: Placa ESP32, Sensores (fotoresistencia) y actuadores (LED).
+- Hardware: Placa ESP32, Sensores (fotoresistencia) y actuadores (motor DC).
 - Visual Studio.
 - NodeJs.
 - MicroPython.

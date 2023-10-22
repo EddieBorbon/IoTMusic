@@ -107,34 +107,84 @@ pd_host = 'xxx.xxx.xxx.xxx'  # Utiliza la dirección IP anotada
 pd_port = 8888
 pd.connect((pd_host, pd_port))
 ```
-### 3. Recibir Datos de un Sensor
+### 3. Recibir Datos de un Sensor desde ESP32 y enviarlos a Pure Data.
 
 En este paso, configuraremos la placa ESP32 para leer datos de un sensor de fotorresistencia. Sigue estos pasos:
 
 1. **Configura el Sensor:**
    - Conecta el sensor de fotorresistencia al pin analógico 36 de la placa ESP32.
 
-2. **Ver Resultados:**
-   - Ejecuta el código y observa los valores de la fotorresistencia que se imprimen en la consola.
-
-Con estos pasos, tu placa ESP32 estará configurada para recibir datos de un sensor y enviarlos al servidor.
 **ESP32 Pinout:**
-
 ![Logo de Mi Proyecto](https://github.com/EddieBorbon/IoTMusic/blob/main/Images/ESP32-Pinout.jpg)
 
 **Ejemplo del circuito**
 
 ![Logo de Mi Proyecto](https://github.com/EddieBorbon/IoTMusic/blob/main/Images/esp32-ldr-wiring.jpg)
 
-## Configuración de la Placa
+Ahora tu placa ESP32 estará configurada para recibir datos de un sensor y enviarlos al servidor.
+2. **Actualizar el Código en ESP32:**
+   - Descarga la carpeta `3. Enviar Datos a Pure Data` y carga los scripts en tu proyecto de Visual Studio Code.
 
-1. Conecta el potenciómetro al pin correspondiente en tu dispositivo.
-2. Ajusta la dirección IP y el puerto del servidor en el código.
+3. **Configuración de Pure Data:**
+   - Abre tu patch de Pure Data y configura los objetos necesarios para recibir datos UDP. Por ejemplo:
 
-## Uso
+   ```pd
+   [udpreceive 8888]
+   |
+   [unpack s]
+   |
+   [print]
 
-1. Carga el script en tu dispositivo con MicroPython.
-2. Ejecuta el script y observa cómo se envían los valores del potenciómetro al servidor.
+4. **Configuración del Código en ESP32:**
+
+Abre el script en tu proyecto relacionado con el envío de datos (sendData.py, por ejemplo).
+
+Busca la sección que configura el servidor UDP:
+   ```python
+   pd_host = 'xxx.xxx.xxx.xxx'  # Utiliza la dirección IP anotada
+   pd_port = 8888
+   pd.connect((pd_host, pd_port))
+   ```
+Asegúrate de que pd_host sea la dirección IP correcta de tu computadora con Pure Data y el puerto sea el mismo que configuraste en Pure Data.
+
+5. **Enviar Datos desde ESP32:**
+Añade el siguiente código al bucle principal para leer datos del sensor y enviarlos a Pure Data:
+   ```python
+   while True:
+       ldr_value = ldr.read()
+       pd.send(ldr_value.to_bytes(2, 'big'))
+       utime.sleep_ms(20)
+   ```
+Este código lee el valor del sensor (fotorresistencia) y lo envía a Pure Data como bytes a través de UDP. Puedes adaptar este código según tus necesidades y el tipo de datos que estás enviando.
+
+**Verificar Resultados:**
+
+   - Ejecuta el script en tu ESP32 y observa la consola para asegurarte de que no haya errores.
+   - Observa la consola de Pure Data para verificar que está recibiendo los datos correctamente.
+
+**Sugerencia:**
+
+   - Si encuentras problemas de conexión, verifica que las direcciones IP y los puertos coincidan entre la ESP32 y Pure Data. Puedes utilizar las herramientas de depuración en ambas plataformas para identificar cualquier problema potencial.
+
+Con estos pasos, tu ESP32 debería estar enviando datos a Pure Data. Puedes ajustar el código según tus necesidades y experimentar con diferentes tipos de datos y configuraciones en Pure Data.
+
+Este proyecto proporciona una base para explorar la integración de sensores y actuadores con tecnologías IoT y música utilizando MicroPython y Pure Data. ¡Diviértete explorando y creando!
+
+## 4. Configuración del Código en ESP32 para Servo Motor
+
+En este paso, te explicaremos cómo configurar el código en tu ESP32 para recibir datos desde Pure Data y controlar un servo motor.
+
+### 4.1 Configuración del Servidor UDP
+
+Abre el script en tu proyecto, por ejemplo, `servoControl.py`.
+
+Busca la sección que configura el servidor UDP:
+
+```python
+addr = usocket.getaddrinfo('0.0.0.0', 5050)[0][-1]
+server = usocket.socket(usocket.AF_INET, usocket.SOCK_DGRAM)
+server.bind(addr)
+print('Servidor listo para recibir')
 
 ## Contribución
 

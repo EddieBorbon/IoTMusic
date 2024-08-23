@@ -287,8 +287,8 @@ Si deseas contribuir a este proyecto en IoTMusic:
 
 ## Licencia
 
-Este proyecto está bajo la Licencia [nombre de la licencia].
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](./LICENSE) para obtener más detalles.
 
 ## Contacto
 
-Para preguntas o comentarios, contáctame en [tu dirección de correo electrónico] o [tus redes sociales].
+Para preguntas o comentarios, contáctame en eddiefloat@gmail.com
